@@ -8,10 +8,7 @@ vo = voyageai.Client()
 client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY
 tbl = lancedb.connect("./semicon_db").open_table("chunks")
 
-SYSTEM = """You are a semiconductor industry research assistant for an industry-insider consultant.
-Answer using ONLY the provided context chunks. Be technically precise and quantitative.
-Cite sources inline as [source: filename]. If the context lacks the answer, say so explicitly
-rather than guessing. Avoid generic AI-flavored language."""
+
 
 def retrieve(question, k=8):
     qvec = vo.multimodal_embed([question], model="voyage-multimodal-3", input_type="query").embeddings[0]
