@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# RAG artifacts
+semicon_db/
+
+# Local docs / source material (uncomment if you don't want to track sources)
+# docs/
+
+# Env / secrets
+.env
+*.env
